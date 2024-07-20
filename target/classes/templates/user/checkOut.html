@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base1::Layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+	
+</head>
+<body>
+	<section>
+		<div class="container" style="margin-top:80px;">
+				<h3 style="text-align: center;">Billing Address</h3>
+				
+				<div class="col-lg-5 " style="margin-left:350px; margin-right: 0px;">
+										<div class="progress-container">
+										                    <div class="step active">
+										                        <div class="step-number">1</div>
+										                        <div class="step-text">CART</div>
+										                    </div>
+										                    <div class="line"></div>
+										                    <div class="step active">
+										                        <div class="step-number">2</div>
+										                        <div class="step-text">ADDRESS</div>
+										                    </div>
+										                    <div class="line"></div>
+										                    <div class="step">
+										                        <div class="step-number">3</div>
+										                        <div class="step-text">PAYMENT</div>
+										                    </div>
+										                </div>				
+									 </div>
+		    <!--Section: Block Content-->
+		    <div class="mt-3 mb-4">
+		
+		        <!--Grid row-->
+		        <div class="row">
+		
+		            <!--Grid column-->
+		            <div class="col-lg-12 mb-4">
+		
+		                <!-- Card -->
+		                <div class="card wish-list pb-1">
+		                    <div class="card-body">
+		
+		                        <!-- Grid row -->
+		                        <div class="row">
+		
+		                            <!-- Grid column -->
+		                            <div class="col-lg-6">
+		
+		                                <!-- First name -->
+		                                <div class="md-form md-outline mb-0 mb-lg-4">
+		                                    <label for="firstName">First name</label>
+		                                    <input type="text" id="firstName" required class="form-control mb-0 mb-lg-2">
+		                                </div>
+		
+		                            </div>
+		                            <!-- Grid column -->
+		
+		                            <!-- Grid column -->
+		                            <div class="col-lg-6">
+		
+		                                <!-- Last name -->
+		                                <div class="md-form md-outline">
+		                                    <label for="lastName">Last name</label>
+		                                    <input type="text" id="lastName" required class="form-control">
+		                                </div>
+		
+		                            </div>
+		                            <!-- Grid column -->
+		
+		                        </div>
+		                        <!-- Grid row -->
+		
+		
+		
+		                        <!-- Country -->
+		                        <div class="d-flex flex-wrap">
+		                            <div class="select-outline position-relative w-100">
+		                                <label>Country - <strong>INDIA</strong></label>
+		
+		
+		                            </div>
+		                        </div>
+		
+		                        <!-- Address Part 1 -->
+		                        <div class="md-form md-outline mt-2">
+		                            <label for="form14">Address (Line 1)</label>
+		                            <input type="text" required id="form14" placeholder="House number and street name" class="form-control">
+		                        </div>
+		
+		                        <!-- Address Part 2 -->
+		                        <div class="md-form md-outline mt-2">
+		                            <label for="form15">Address (Line 2)</label>
+		                            <input type="text" id="form15" placeholder="Apartment, suite, unit etc. (optional)"
+		                                   class="form-control">
+		                        </div>
+		
+		                        <!-- Postcode / ZIP -->
+		                        <div class="md-form md-outline mt-3">
+		                            <label for="form16">Postcode / ZIP</label>
+		                            <input type="text" maxlength="6" minlength="6" required id="form16" class="form-control">
+		                        </div>
+		
+		                        <!-- Town / City -->
+		                        <div class="md-form md-outline mt-2">
+		                            <label for="form17">Town / City</label>
+		                            <input type="text" required id="form17" class="form-control">
+		
+		                        </div>
+		
+		                        <!-- Phone -->
+		                        <div class="md-form md-outline mt-2">
+		                            <label for="form18">Phone</label>
+		                            <input type="number" minlength="10" maxlength="10" required id="form18" class="form-control">
+		                        </div>
+		
+		                        <!-- Email address -->
+		                        <div class="md-form md-outline mt-2">
+		                            <label for="form19">Email address</label>
+		                            <input type="email" required id="form19" class="form-control">
+		                        </div>
+		                    </div>
+							<form style="text-align: center;" th:action="@{/payment}" >
+								       <button style="height:auto; width:auto;" type="submit"  class="btn btn-primary btn-block waves-effect waves-light mb-2">Pay Now <span th:text="${ft}"></span></button>
+								     </form>
+		                </div>
+		                <!-- Card -->
+		
+		            </div>
+
+		            <!--Grid column-->
+
+		        </div>
+		        <!--Grid row-->
+		
+		    </div>
+		    <!--Section: Block Content-->
+		
+		
+		</div>
+		</section>
+		     </body>
+			</html>

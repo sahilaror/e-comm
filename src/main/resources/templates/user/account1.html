@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="user/base3::Layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+	
+</head>
+<body>
+	<section>
+		
+		<div class="c">
+			<div class="container">
+			        <div class="sidenav">
+			            <h1>Orders</h1>
+			            <ul>
+			                <a href="#"><li class="list-group ">My Orders</li></a>
+			                <a href="/logout"><li class="list-group">Sign out</li></a>
+			            </ul>
+			        </div>
+			        <div class="content">
+						<p style="text-align:right; margin-right:-50px;" th:text="${userInfo.email}"></p>
+						<h5 style="text-align: left; margin-top:20px;">Showing All Orders</h5>
+						
+						<h1>Order History</h1>
+						   <div th:each="order : ${orders}">
+						       <h2>Order ID: <span th:text="${order.id}"></span></h2>
+						       <p>Order Date: <span th:text="${#dates.format(order.orderDate, 'yyyy-MM-dd HH:mm')}"></span></p>
+						       <div th:each="item : ${order.items}">
+						           <p>Product: <span th:text="${item.product.name}"></span></p>
+						           <p>Price: ₹<span th:text="${item.price}"></span></p>
+						           <p>Quantity: <span th:text="${item.quantity}"></span></p>
+						       </div>
+						       <p>Total: ₹<span th:text="${order.total}"></span></p>
+						   </div>
+						
+						
+						
+			        </div>
+			    </div>
+		</div>
+		</section>
+			</body>
+			</html>
+			
